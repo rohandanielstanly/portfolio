@@ -186,6 +186,44 @@ dialog,dialog *{cursor:auto!important}
 .pt.hv::before{content:"";position:absolute;z-index:2;left:var(--px,50%);top:var(--py,50%);width:190px;height:190px;margin:-95px;border-radius:50%;border:1px solid #fff9;pointer-events:none}
 .pw{transition:transform .25s ease-out;transform-style:preserve-3d}
 .nomo .pt canvas.px,.nomo .pt img.cl{display:none}
+
+/* ---- mobile / tablet layout (desktop above 900px is untouched) ---- */
+@media(max-width:900px){
+.w{padding:0 20px}
+.hero{padding:104px 20px 48px}
+section{padding:64px 0}
+.hg{gap:36px;margin-top:20px}
+.pw{max-width:360px}
+.st{margin-top:44px}
+.st div{padding:18px}.st span{display:block;line-height:1.5}
+.two{gap:28px}
+h2{margin-bottom:26px}
+.tl{gap:32px;margin-bottom:44px;padding-left:24px}
+.tl>div::before,.tl>details::before{left:-30px}
+}
+@media(max-width:700px){
+nav{top:10px;max-width:calc(100vw - 24px)}
+nav button.l{display:none}
+.role{font-size:11px;letter-spacing:.08em;margin:22px 0 10px}
+.lead{font-size:16px;line-height:1.6}
+.hg .btns{gap:10px}
+.hg .btns .b{flex:1 1 auto;text-align:center;padding:13px 16px}
+.hg .btns .b.p{flex-basis:100%}
+.fl{padding:9px 12px;font-size:12px}.fl b{font-size:13px}
+.card{padding:22px}
+.mq{padding:12px 0}
+.ct .bt{font-size:clamp(40px,15vw,120px);margin-bottom:22px}
+.cf .b{justify-self:stretch;text-align:center}
+.ct .btns .b{flex:1 1 40%;text-align:center}
+.di{padding:26px 20px}
+footer .w{flex-direction:column;gap:10px}
+.tb{font-size:10px;padding:6px 12px;gap:8px}
+}
+@media(max-width:380px){
+.w{padding:0 16px}.hero{padding:100px 16px 40px}
+.st b{font-size:30px}.st div{padding:14px}
+.lead{font-size:15px}
+}
 </style><noscript><style>nav>*{opacity:1}.pw .pt{clip-path:none!important}</style></noscript></head>
 <body>
 <div id="pg"></div><div id="cur"></div><div id="rg"></div>
@@ -196,7 +234,7 @@ dialog,dialog *{cursor:auto!important}
 <div class="bt" id="bt" aria-hidden="true"></div>
 <div class="hg">
 <div>
-<h1><span class="hi">Hello, I'm</span><span class="nm sel">ROHAN.</span><span class="vh"> D Stanly, Android and Flutter engineer</span></h1>
+<h1><span class="hi">Hello, I'm</span><span class="nm sel">ROHAN D STANLY.</span><span class="vh"> D Stanly, Android and Flutter engineer</span></h1>
 <div class="role" id="rl"> <i></i></div>
 <p class="lead sel in">I build mobile apps that keep playing when the signal drops. Three years of production <b>Kotlin</b> at MACOM, and four apps of my own live on <b>Google Play</b> and the <b>App Store</b>.</p>
 <div class="btns"><a class="b p" href="#apps">SEE THE LIVE APPS →</a><a class="b" href="#contact">HIRE ME</a><a class="b" href="https://github.com/rohandanielstanly" target="_blank" rel="noopener">GITHUB ↗</a></div>
@@ -374,4 +412,3 @@ mo.addEventListener('click',()=>{const on=mo.getAttribute('aria-pressed')!=='tru
 $('#rp').addEventListener('click',()=>{if(!R&&!off()&&scrollY<500){scrollTo({top:0,behavior:'instant'});heroSeq(1)}else rebuild()});setMo(!R);if(!R)heroSeq();
 </script>
 </body></html>
-
